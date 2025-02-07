@@ -1,0 +1,434 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgb(115, 35, 165), rgb(141, 20, 141)); /* Violet contrasté */
+    color: #fafafa;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    cursor: url('Assets/aiguille.png'), auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem; /* Réduire la taille de la police */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.3rem; /* Réduire la taille de la police */
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 1.3rem; /* Réduire la taille de la police */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 100px;
+}
+
+p {
+    font-size: 1.3rem; /* Réduire la taille de la police */
+    color: #FFC0CB;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* header */
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: url('Assets/aiguille.png'), auto;
+    display: none;
+}
+
+.action_btn{
+    background: linear-gradient(rgb(95, 87, 87), purple);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: url('Assets/aiguille.png'), auto;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: rgb(255, 255, 255);
+    cursor: url('Assets/aiguille.png'), auto;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+/* responsive */
+
+@media (max-width: 992px) {
+    .navbar .links, 
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* dropdown menu */
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255,255 ,255 ,0.1 );
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu.open{
+    height: 250px;
+    z-index: 10;
+}
+
+.links li{
+    background-color: transparent;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    cursor: url('Assets/aiguille.png'), auto;
+}
+.links li:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    scale: 1.05;
+}
+
+.links li:active{
+    scale: 0.95;
+}
+
+.para-avis{
+    padding: 40px 20px;
+    margin: 15px;
+    background-color: #6A1B9A;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px; /* Problématique remontée */
+}
+
+.para-avis h2 {
+    font-size: 2rem; /* Réduire la taille de la police */
+    margin-bottom: 20px;
+}
+
+.para-avis p {
+    font-size: 1rem; /* Réduire la taille de la police */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.avis-q1{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q1 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q2{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q2 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q3{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q3 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q4{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q4 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q5{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q5 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q6{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q6 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q7{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q7 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q8{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q8 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q9{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q9 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q10{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q10 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
+
+.avis-q11{
+    font-size: 1.3rem;
+    margin: 50px;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.avis-q11 img{
+    height: auto;
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+    border: solid;
+}
