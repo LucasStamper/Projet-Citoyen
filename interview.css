@@ -101,8 +101,8 @@ font-weight: bold;
 }
 
 .action_btn{
-    background: linear-gradient(rgb(95, 87, 87), purple);
-    color: white;
+    background: linear-gradient(white, purple);
+    color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
@@ -431,4 +431,10 @@ font-weight: bold;
     padding: 30px;
     margin: 20px;
     border: solid;
+}
+
+#tatiana1{
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }

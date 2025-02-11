@@ -240,7 +240,7 @@ font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    animation: slideInFromLeft 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hero-banner p {
@@ -250,7 +250,7 @@ font-weight: bold;
     margin: 0 auto;
     line-height: 1.8;
     font-weight: 300;
-    animation: slideInFromRight 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Problématique sur la page d'accueil */
@@ -475,4 +475,25 @@ footer a:hover {
 
 .links li:active{
     scale: 0.95;
+}
+
+.donnee{
+    background: linear-gradient(rgb(115, 35, 165), rgb(141, 20, 141)); /* Violet contrasté */
+    padding: 100px 20px; /* Réduire la taille de la section */
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid #6A1B9A; 
+    margin-bottom: 50px;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.donnee p{
+    font-size: 1rem; /* Réduire la taille de la police */
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
+    animation: fadeIn 1s ease-in-out;
 }
