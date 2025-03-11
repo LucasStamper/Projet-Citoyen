@@ -1,10 +1,14 @@
+<script src="script.js" defer></script>
+
 // Fonction d'animation au défilement
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('.appear-on-scroll');
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight) {
+        if (sectionTop < window.innerHeight && !section.classList.contains('visible')) {
             section.classList.add('visible');
+        } else if (sectionTop >= window.innerHeight && section.classList.contains('visible')) {
+            section.classList.remove('visible');
         }
     });
 });
@@ -62,4 +66,20 @@ backToTopButton.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     });
+});
+
+// Fonction pour gérer le menu déroulant
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars';
+    };
 });
