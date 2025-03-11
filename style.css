@@ -371,11 +371,20 @@ footer a:hover {
     transform: scale(1.05);
 }
 
+/* Team Container */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
 /* Team Member Section */
 .team-member {
     margin: 20px auto;
     padding: 20px;
-    max-width: 600px;
+    max-width: 300px;
     background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
