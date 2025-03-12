@@ -85,9 +85,16 @@ header {
     color: #FF007F;
 }
 
+/* Navbar Links */
 .navbar .links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem; /* Réduisez l'espacement entre les liens */
+    flex-wrap: wrap; /* Permet aux liens de se répartir sur plusieurs lignes si nécessaire */
+}
+
+.navbar .links li {
+    font-size: 0.9rem; /* Réduisez la taille de la police des liens */
+    padding: 0.5rem; /* Ajoutez du padding pour améliorer l'espacement */
 }
 
 .navbar .toggle_btn {
@@ -167,7 +174,7 @@ header {
 }
 
 .dropdown_menu.open {
-    height: 250px;
+    height: 300px; /* Ajustez la hauteur pour inclure tous les liens */
     z-index: 10;
 }
 
@@ -369,6 +376,26 @@ footer a:hover {
 
 .interview-section img:hover {
     transform: scale(1.05);
+}
+
+/* Interview Container */
+.interview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner à gauche */
+    gap: 2rem; /* Espacement entre les sections */
+}
+
+/* Interview Section */
+.interview-section.left-aligned {
+    align-self: flex-start; /* Assurez-vous que les sections sont alignées à gauche */
+}
+
+/* Question Images */
+.question-img {
+    width: 100%; /* Ajuster la taille des images */
+    max-width: 300px; /* Limiter la largeur maximale */
+    margin-bottom: 1rem; /* Espacement en bas des images */
 }
 
 /* Team Container */
@@ -611,4 +638,135 @@ footer a:hover {
 /* Assurez-vous que le contenu principal est bien positionné sous la navbar */
 main {
     margin-top: 80px; /* Ajustez cette valeur en fonction de la hauteur de votre navbar */
+}
+
+/* Solution Container */
+.solution-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+/* Solution Item */
+.solution-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+    text-align: center;
+    background-color: #1e1e1e; /* Couleur de fond pour correspondre au reste du site */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.solution-item:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.solution-item img {
+    max-width: 120px; /* Augmenter la taille des images de 20% */
+    margin-bottom: 1rem;
+}
+
+.solution-item h3 {
+    color: #ff69b4; /* Couleur rose */
+    margin-bottom: 1rem;
+}
+
+.solution-item p {
+    color: #F5F5F5; /* Couleur du texte pour correspondre au reste du site */
+}
+
+/* Credits Section */
+.credits-section {
+    margin: 50px auto;
+    padding: 30px 20px;
+    max-width: 900px;
+    background-color: #1e1e1e;
+    color: #F5F5F5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.credits-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    color: #FF007F;
+    text-transform: uppercase;
+}
+
+.credits-section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #F5F5F5;
+}
+
+/* Social Links Section */
+.social-links-section {
+    margin: 50px auto;
+    padding: 30px 20px;
+    max-width: 900px;
+    background-color: #1e1e1e;
+    color: #F5F5F5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.social-links-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    color: #FF007F;
+    text-transform: uppercase;
+}
+
+.social-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.social-link {
+    flex: 1 1 45%;
+    max-width: 45%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.social-link:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.social-link h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #FF007F;
+}
+
+.social-link a {
+    display: block;
+    margin: 10px 0;
+    color: #00E0FF;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link a:hover {
+    color: #FF007F;
+    transform: scale(1.1);
 }
