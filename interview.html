@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
     <title>Interview</title>
 </head>
@@ -28,10 +31,10 @@
         <div class="dropdown_menu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="contexte.html">Contexte</a></li>
+            <li><a href="chronologie.html">Chronologie</a></li>
             <li><a href="interview.html">Interview</a></li>
             <li><a href="stat.html">Statistiques</a></li>
             <li><a href="solutions.html">Solutions</a></li>
-            <li><a href="chronologie.html">Chronologie</a></li>
             <li><a href="contact.html" class="action_btn">à propos de nous</a></li>
         </div>
     </header>
@@ -49,7 +52,7 @@
     </section>
 
     <div class="para-avis">
-        <p>Ici vous pourrez retrouver l'entièreté des avis récoltés sur le questionnaire Google Form mais aussi ceux des interviews réalisés. Nous avons premièrement optés pour un questionnaire car c'est plutôt simple de prise en main, les personnes peuvent répondre aux questions qu'elles souhaitent dépendant de leur état d'esprit sur une ou plusieurs questions. Les interviews sont aussi une options que nous avons choisi car recevoir des réponses venant directement de la bouche d'une personne reste ce qu'il y a de plus authentique.</p>
+        <p>Ici vous pourrez retrouver l'entièreté des avis récoltés sur le questionnaire Google Form mais aussi ceux des interviews réalisés. Nous avons premièrement opté pour un questionnaire car c'est plutôt simple de prise en main, les personnes peuvent répondre aux questions qu'elles souhaitent dépendant de leur état d'esprit sur une ou plusieurs questions. Les interviews sont aussi une option que nous avons choisie car recevoir des réponses venant directement de la bouche d'une personne reste ce qu'il y a de plus authentique.</p>
     </div>
 
     <div class="interview-container">
@@ -101,5 +104,19 @@
     <footer>
         <p>&copy; 2025 Projet Citoyen. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onclick = function() {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    toggleBtnIcon.classList = isOpen 
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+}
+    </script>
 </body>
 </html>

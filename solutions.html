@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
     <title>Solutions</title>
 </head>
@@ -44,13 +47,13 @@
     </section>
 
     <section class="content-section appear-on-scroll">
-        <h2>Intro</h2>
-        <p style="color: white;">Plusieurs initiatives ont été mises en place pour promouvoir l'égalité des sexes dans le domaine du numérique. Cependant pour cela il faut comprendre ce qu’il ne va pas dans notre système :</p>
+        <h2>Introduction</h2>
+        <p>Plusieurs initiatives ont été mises en place pour promouvoir l'égalité des sexes dans le domaine du numérique. Cependant, pour cela, il faut comprendre ce qu’il ne va pas dans notre système :</p>
     </section>
 
     <section class="content-section appear-on-scroll">
         <div class="image-container" style="max-width: 100%;">
-            <img src="Assets/_Understanding_Gender_Inequality_in_the_Workplace (1).jpg" alt="Contexte du numérique et de l'égalité des sexes" style="width: 120%;">
+            <img src="Assets/_Understanding_Gender_Inequality_in_the_Workplace (1).jpg" alt="Contexte du numérique et de l'égalité des sexes" style="width: 100%;">
         </div>
         <h2>Nos solutions</h2>
         <p>Nous proposons diverses solutions pour améliorer l'inclusivité dans le secteur numérique...</p>
@@ -113,6 +116,20 @@
     <footer>
         <p>&copy; 2025 Projet Citoyen. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onclick = function() {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    toggleBtnIcon.classList = isOpen 
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+}
+    </script>
 </body>
 
 </html>
