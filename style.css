@@ -770,3 +770,9 @@ main {
     color: #FF007F;
     transform: scale(1.1);
 }
+
+.para-avis{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
